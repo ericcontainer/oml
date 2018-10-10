@@ -1,48 +1,59 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    
-    <title>Bottom navbar example for Bootstrap</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  </head>
-  <body>
-        <div class="container">
-                <div class="row">
-                    <div class='col-sm-6'>
-                        <div class="form-group">
-                            <div class='input-group date' id='datetimepicker1'>
-                                <input type='text' class="form-control" />
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <script type="text/javascript">
-                        $(function () {
-                            $('#datetimepicker1').datetimepicker();
-                        });
-                    </script>
-                </div>
-            </div>
-    
-    <button class="btn btn-primary">foo</button>
-  
+<div>
+    <h3>Auto Blackout</h3>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+    <h4>---- Time Template ----</h4>
+    <p>Nome do Time Template <input type="text" id="nametmptemplate"></p>
+    <p>
+        <label for="tmp">Tipo do TimeTemplate</label>
+        <select name="timetemplate" id="timetemplate">
+        <option>Semanal</option>
+        <option>Diario</option>
+        </select>
+    </p>
+    
+    <div id="tmpsemanal">
+            <p>Start date: <input type="text" id="startdate"></p>
+            <p>End date: <input type="text" id="enddate"> </p>
+    </div>
+        
+    <div id="tmpdiario">
+                <p>Date: <input type="text" id="date"></p>            
+                <p>Hora inicial: <input type="text" id="starttime"></p>
+                <p>Hora Final: <input type="text" id="endtime"></p>
+    </div>
+    <label for="lblc">Adicionar/Remover Condições</label>
+    <button id="btn1">+</button>
+    <button id="btn1">-</button>
+    
+    <h4>---- Msg target rules ----</h4>
+    <p>
+            <label for="tmpconds">Condição</label>
+            <select name="tmpcond" id="tmpcond">
+            <option>OBJECT</option>
+            <option>NODE</option>
+            </select>
+        </p>
+    <label for="lblc">Adicionar/Remover Condições</label>
+    <button id="btn1">+</button>
+    <button id="btn1">-</button>
+    <input type="hidden" id="startdatepicker" name="startdatepicker">
+    <input type="hidden" id="enddatepicker" name="enddatepicker">
+    <input type="hidden" id="datepicker" name="datepicker">
+</div>
+ 
+</body>
 </html>
